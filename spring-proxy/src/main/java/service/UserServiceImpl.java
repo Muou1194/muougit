@@ -15,6 +15,7 @@ public class UserServiceImpl implements UserService {
     public void update() {
         System.out.println("更新了一个用户");
         System.out.println(123);
+        System.out.println(321);
     }
 
     @Override
