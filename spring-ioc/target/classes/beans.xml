@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--bean = 对象-->
+    <!--id = 变量名-->
+    <!--class = new的对象-->
+    <!--property 相当于给对象中的属性设值-->
+
+    <bean id="hello" class="com.zht.pojo.Bean">
+<!--        <constructor-arg index="0" value="赵海涛大帅逼1"/>-->
+<!--        <constructor-arg type="java.lang.String" value="赵海涛大帅逼2" />-->
+        <constructor-arg name="str" value="赵海涛大帅逼3" />
+    </bean>
+
+    <bean id="userDao" class="com.zht.dao.UserDaoImpl"></bean>
+
+    <bean id="userOracleDao" class="com.zht.dao.UserOracleDaoImpl"></bean>
+
+    <bean id="userService" class="com.zht.service.UserService">
+        
+        <property name="userDao" ref="userOracleDao"></property>
+
+    </bean>
+
+
+
+</beans>
